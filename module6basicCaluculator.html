@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calulator</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            margin: 5% auto;
+            border: 2px solid black;
+            width: 35%;
+            padding:50px;
+        }
+        .no1{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+        .no2{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+
+        }
+        .btn{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .left{
+            width: 30%;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+        }
+        .left button{
+            padding: 8px 15px;
+            
+
+        }
+        .right{
+            width: 50%;
+        }
+        .right input{
+            width: 40px;
+            border: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <center><h1 >Maths Operations</h1></center>
+        <div class="no1">   <label for="">Enter 1st Number:</label> <input type="text" id="num1"> </div>
+        <div class="no2">  <label for="">Enter 2st Number:</label> <input type="text" id="num2">  </div>
+       
+        <div class="btn">
+            <div class="left"> 
+                <button onclick="myFunction()">+</button>
+                <button onclick="Sub()">-</button>
+                <button onclick="Multi()">*</button>
+                <button onclick="divide()">/</button>
+                <button onclick="pert()">%</button></div> <!-- left ends here -->
+                
+                <div class="right"> 
+                   <label for="">Answer is: </label><input type="text" id="ans" >
+
+                </div> 
+            
+        </div> <!-- btn ends here -->
+
+        <script>
+
+            
+
+            function myFunction(){
+
+                var a = parseInt(document.getElementById("num1").value);
+                var b = Number(document.getElementById("num2").value);
+                var c = document.getElementById("ans").value;
+
+                c = a+b;
+                document.getElementById("ans").value = c; 
+
+            }
+
+            function Sub(){
+                var a = Number(document.getElementById("num1").value);
+                var b = Number(document.getElementById("num2").value);
+                var c = document.getElementById("ans").value;
+
+                 c = a - b;
+                document.getElementById("ans").value = c ;
+            }
+            function Multi(){
+                var a = Number(document.getElementById("num1").value);
+                var b = Number(document.getElementById("num2").value);
+                var c = document.getElementById("ans").value;
+
+
+                c = a*b;
+                document.getElementById("ans").value = c ;
+            }
+            function divide(){
+                var a = Number(document.getElementById("num1").value);
+                var b = Number(document.getElementById("num2").value);
+                var c = document.getElementById("ans").value;
+
+                c = a/b;
+                document.getElementById("ans").value = c;
+            }
+            function pert(){
+                var a = Number(document.getElementById("num1").value);
+                var b = Number(document.getElementById("num2").value);
+                var c = document.getElementById("ans").value;
+
+                c = a%b;
+                document.getElementById("ans").value = c;
+            }
+        </script>
+
+    </div><!-- main div end here -->
+</body>
+</html>

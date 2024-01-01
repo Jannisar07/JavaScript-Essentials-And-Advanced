@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px;
+    }
+    h1{
+        text-align: center;
+    }
+</style>
+<body>
+    
+    <h1>Module 6: JAVASCRIPT BASIC & DOM</h1>
+    <h2>1.  What is JavaScript?</h2>
+    <p> <strong>Answer:</strong> JavaScript is a dynamic computer programming language. Its implementations allow client-side script to communicate with users and build dynamic pages, and it is most commonly used as a web page component. It is an interpretable object-oriented programming language. The initial name of JavaScript was LiveScript, but Netscape changed it to JavaScript, maybe in response to the excitement that Java was creating. LiveScript, the forerunner to JavaScript, first appeared in Netscape 2.0 in 1995. The core of the general-purpose language can be found in Netscape, Internet Explorer, and other web browsers.</p>
+    <hr>
+
+    <h2>2.  What is the use of isNaN function?
+    </h2>
+    <p> <strong>Answer:</strong> The isNaN() method in JavaScript can be used to determine whether or not a given value is an illegal number. It returns true if the value is a NaN; else, it returns false. It is not the same as the Number.The function isNaN()
+       <br> <br> <strong>Syntax:</strong>. <br> isNaN( value )</p>
+    <hr>
+
+    <h2>3. What is negative Infinity?</h2>
+    <p> <strong>Answer:</strong> A negative infinity is a number formed in Java script by "dividing a negative number by zero." <br><br>
+
+        This static attribute does not require the creation of a number object. <br><br>
+        
+        
+        The negative value of the global object's infinity attribute is the same as the value of negative infinity. <br></p>
+    <hr>
+
+    <h2>4. Which company developed JavaScript?</h2>
+    <p> <strong>Answer:</strong> Brendan Eich created JavaScript in 1995 while working at Netscape Communications. Netscape and Eich developed JavaScript as a scripting language for use with Netscape Navigator, the company's principal web browser. Netscape altered the name of the language from LiveScript to JavaScript in order to promote it as a companion for the Java language, a product of its partner Sun Microsystems. JavaScript and the Java programming language are unrelated, despite some superficial syntactic similarities.Following its release, an increasing number of browsers began to support JavaScript. Despite this, JavaScript was not regarded as a serious programming language for much of its history. Early versions had serious speed and security issues, but engineers had no other options.</p>
+
+
+    <hr>
+
+    <h2>5. What are undeclared and undefined variables?</h2>
+    <p> <strong>Answer:</strong> Undefined variables are those that have been declared but have not been assigned a value. A keyword is never left undefined. <br> <br>
+
+        The undeclared error occurs when we attempt to access a variable that has not yet been initialised or declared using the var or const keyword. We will obtain a runtime error with the return value "undefined" if we try to retrieve the value of an undeclared variable using the 'typeof' operator. The scope of undeclared variables is always global..</p>
+
+        <h2>For example: Undefined:</h2> 
+        undefined <br>
+        console.log(Jannisar)  <br>
+        let Jannisar; <br><br>
+        <h2>For example:   Undeclared:</h2> 
+        // ReferenceError: myVariable is not define   <br>
+         console.log(myVariable)
+
+      
+
+    <hr>
+
+    <h2>6.Write the code for adding new elements dynamically?</h2>
+    <p> <strong>Answer:</strong> HTML DOM, which displays an HTML document as a tree structure, simplifies the reading and editing of HTML texts. When an HTML file is loaded into a browser window, a Document object is produced. You can make use of the document.In JavaScript, use the createElement() method to create a specified HTML element dynamically. Attributes can be added after the object has been created. If you want the element to appear in the document, you must add it to the DOM-tree.</p> <br>
+
+    &lt;html&gt; <br>
+    &lt;body&gt; <br>
+    &lt;button onclick="create()"&gt;Create Heading&lt;/button&gt; <br>
+    &lt;script&gt; <br>
+    function create() { <br>
+    var h1 = document.createElement('h1'); <br>
+    h1.textContent = "New Heading!!!"; <br>
+    h1.setAttribute('class', 'note'); <br>
+    document.body.appendChild(h1); <br>
+    } <br>
+    &lt;/script&gt; <br>
+    &lt;/body&gt; <br>
+    &lt;/html&gt; <br> <br>
+
+    Please take notes.When documenting, the element is created.createElement is a function that is used in conjunction with an HTML tag. The class attribute is modified once the textContent has been adjusted using setAttribute. This can also be used to add a data attribute or any other type of attribute, just like in HTML.
+
+The element is eventually joined to the body using the appendChild method of the body element.
+
+It's almost exactly the same as New Heading!!!.
+
+The capacity to develop and style things "on the fly" is a key feature of what we're seeing now. You can either add each element to the page as you build it, or use the createElement() method to create and insert HTML elements dynamically during runtime.
+
+
+    <hr>
+
+    <h2>7.What is the difference between ViewState and SessionState?</h2>
+    <p> <strong>Answer:</strong> <table border="1" cellspacing="0">
+        <tr bgcolor="lightgray">
+            <th>ViewState</th>
+            <th>SessionState</th>
+        </tr>
+        <tr>
+            <td>solely at the page level
+                maintained. </td>
+            <td>held at the session level.</td>
+        </tr>
+        <tr>
+            <td>Only one page, not numerous
+                pages, can display the view
+                status.
+            </td>
+            <td>The availability of session state
+                values spans all pages accessible
+                during a user session.
+            </td>
+        </tr>
+        <tr>
+            <td>In the case that a postback
+                operation does place, values will
+                be retained.
+            </td>
+            <td>In session state, user data
+                remains in the server. Data is
+                available to user until the
+                browser is closed or there is
+                session expiration.
+            </td>
+        </tr>
+        <tr>
+            <td>Only the client's end of the
+                information is kept on file.</td>
+            <td>On the server, information is
+                saved.
+            </td>
+        </tr>
+        <tr>
+            <td>used to provide the storage of
+                information unique to a given
+                page instance.
+            </td>
+            <td>used to store user-specific data
+                permanently on the server.
+            </td>
+        </tr>
+        <tr>
+            <td>When a new page is loaded,
+                ViewState values are lost or
+                cleared</td>
+            <td>It is possible for a programmer,
+                user, or timeout to clear the
+                session state.
+            </td>
+        </tr>
+    </table>
+</details></p>
+
+
+    <hr>
+
+    <h2>8. What is === operator?</h2>
+    <p> <strong>Answer:</strong> The JavaScript Strict Equality Operator checks two operands and returns true if the values and types of the operands are the same. Because there is no type conversion, the operation will return false even if the operands have the same value but distinct types.</p> <br>
+    <h2>Syntax:</h2>
+     <p> a===b </p>
+    <hr>
+
+    <h2>9.How can the style/class of an element be changed?</h2>
+    <p> <strong>Answer:</strong> This article will show us how to change the style or class of an element. If you want to make a cool website or app, the user interface is essential. Any CSS attribute from an HTML element can be updated, added, or removed in response to any event using JavaScript. We can finish this assignment utilising one of two typical ways. <br>
+
+       > style.property  <br>
+       > Modifying the class itself <br>
+        Approach:The style attribute in CSS can be used to:</p>
+
+        <h2>Syntax:</h2>
+        document.getElementById("id").style.property = new_style
+
+    <hr>
+
+    <h2>10. How to read and write a file using JavaScript?</h2>
+    <p> <strong>Answer:</strong> JavaScript browsers do not support file reading and writing on the client side. On the server side, the Node.js fs module can be utilised. It supports both synchronous and asynchronous file system reading and writing operations. There will be several examples of the node.js fs module reading and writing files displayed. <br> <br>
+
+        Javascript's fs.readFile() and rs.writeFile() APIs are used to read and write files. The file is read using an internal method known as fs.readFile(). The full file is read into memory and stored in a buffer using this method.</p>
+
+        <h2>Syntax:</h2>
+        fs.readFile( file_name, encoding, callback_function )
+    <hr>
+
+    <h2>11. What are all the looping structures in JavaScript?</h2>
+    <p> <strong>Answer:</strong> <strong>In JavaScript, the following looping statements are supported:</strong>
+        <br>
+        <br>
+        <h2>For Loop Statement</h2>
+        <p>
+            When a loop is used, it performs the three specified tasks (Statement 1,
+            Statement 2, Statement 3) a fixed number of times. The general syntax of the
+            "for" statement is demonstrated in the following code.
+        </p>
+        <br>
+        <h2> Syntax </h2>
+        <br>
+        <div>
+            for (initialization; condition; increment/ decrement) <br>
+            { <br>
+            Executed these statements; <br>
+            } <br>
+        </div>
+        <br>
+        <h2> While Loop Statement </h2>
+        <br>
+        <p>
+            Of all looping statements, the while one is the most straightforward. While a
+            particular condition is true, a block of code is repeated in a while loop. The
+            three distinct jobs have been carried out in the for loop. The same three
+            specific activities are carried out in the while loop as well as where it is
+            mentioned in the statement, but the initialization and conditions of the while
+            loop take place in various locations. The code below demonstrates the while
+            statement's basic syntax:
+        </p>
+        <br>
+        <h2>Syntax</h2>
+        <br>
+        <div>
+            while (condition) <br>
+            { <br>
+            Execute these statements; //true <br>
+            Increment/decrement; <br>
+            } <br>
+        </div>
+        <br>
+        <h2>do-while Statement</h2>
+        <br>
+        <p>
+            The while statement and the do-while statement are related. The condition is
+            present outside the statement in the do-while construct. If the condition is not
+            met, it will still run at least once. If the condition is true, the code will continue
+            to run; if the condition is false, the code will cease running. The general syntax
+            of the while statement is shown in the following code:
+        </p>
+        <br>
+        <h2>Syntax</h2>
+        <br>
+        <div>
+            do <br>
+            { <br>
+            Execute the statements; <br>
+            Increment/decrements; <br>
+            } <br>
+            while (condition) //true <br>
+        </div>
+
+    </details></p>
+
+
+    <hr>
+
+    <h2>12. How can you convert the string of any base to an integer in JavaScript?</h2>
+    <p> <strong>Answer:</strong> To convert a text to an integer, avaScript employs the parseInt(), Number(), and Unary operator (+) utilities. When there is no number in the text, the parseInt() function returns NaN (not a number). If a string containing a number is provided, only the specified number will be returned. This function does not allow spaces. If a number is supplied with spaces, the portion of the number preceding the space is returned as the output. <br>
+
+        To convert a string to an integer, we can utilise the parseInt(), Number(), and Unary operator (+) functions. </p>
+        <h2>Syntax:</h2>
+        parseInt(string); parseInt(string,radix); <br>
+        Number(value)
+    <hr>
+
+    <h2>13.What is the function of the delete operator?</h2>
+    <p> <strong>Answer:</strong> The delete operator can be used to delete an object, an object's property, or an array element. Variables not declared with the var statement can also be deleted with the operator.
+
+    </p>
+    <h2>Syntax:</h2>
+    delete objectName delete objectName.property delete objectName[index] <br>
+delete property // The command acts only within a with statement.
+<hr>
+
+<h2>14.What are all the types of Pop up boxes available in JavaScript?</h2>
+    <p> <strong>Answer:</strong>  <h2>Alert: A message with an OK button is all that is shown.</h2>
+        <br>
+        <div >
+
+            &lt; !DOCTYPE html &gt; <br>
+            &lt; html &gt; <br>
+            &lt; body &gt; <br>
+            &lt; p &gt;Click the button to display an alert box. &lt; /p &gt; <br>
+            &lt;button onclick="myFunction()"&gt; Click me &lt;/button&gt; <br>
+            &lt;script&gt; <br>
+            function myFunction() { <br>
+            alert("Hello! Welcome to home!"); <br>
+            } <br>
+            &lt;/script&gt; <br>
+            &lt;/body&gt; <br>
+            &lt;/html&gt; <br>
+        </div>
+        <br>
+        <h2>Confirm -- A confirmation message window with an OK and Cancel button appears. </h2>
+        <br>
+        <div >
+            &lt; !DOCTYPE html &gt; <br>
+            &lt; html &gt; <br>
+            &lt; body &gt; <br>
+            &lt; p &gt;Click the button to display an confirm box. &lt; /p &gt; <br>
+            &lt;button onclick="myFunction()"&gt; Click me &lt;/button&gt; <br>
+            &lt;script&gt; <br>
+            function myFunction() { <br>
+            confirm("Press a button!"); <br>
+            } <br>
+            &lt;/script&gt; <br>
+            &lt;/body&gt; <br>
+            &lt;/html&gt; <br>
+        </div>
+        <br>
+        <h2>Prompt: A dialog window asking for the user's input then displays
+            confirmation buttons.</h2>
+        <br>
+        <div >
+            &lt; !DOCTYPE html &gt; <br>
+            &lt; html &gt; <br>
+            &lt; body &gt; <br>
+            &lt; p &gt;Click the button to display an prompt box. &lt; /p &gt; <br>
+            &lt;button onclick="myFunction()"&gt; Click me &lt;/button&gt; <br>
+            &lt;p id ="demo"&gt;&lt;/p&gt; <br>
+            &lt;script&gt; <br>
+            function myFunction() { <br>
+            var person = prompt("Please enter your name", "panchal"); <br>
+            if (person != null) { <br>
+            document.getElementById("demo").innerHTML = <br>
+            "Hello " + person + "! How are you today?"; <br>
+            } <br>
+            } <br>
+
+            &lt;/script&gt; <br>
+            &lt;/body&gt; <br>
+            &lt;/html&gt; <br>
+        </div>
+    </details>
+    <hr>
+    <h2>15. What is the use of Void (0)?</h2>
+    <p> <strong>Answer:</strong> "javascript:void(0)" may have appeared on occasion in an HTML document. When adding an expression to a web page, it can have unforeseen implications. To undo this effect, use the command "javascript:void(0)". This expression produces an undefinable primitive value. This is commonly used with hyperlinks. You may opt to run JavaScript from a link on occasion. When you click a link, the browser normally loads a fresh copy of the current page based on the URL provided. However, if you've linked some JavaScript to that link, you probably don't want this to happen. The use of void(0) would prevent the page from refreshing.. 
+        <hr>
+
+
+        <h2>16. How can a page be forced to load another page in JavaScript?</h2>
+        <p> <strong>Answer:</strong> In Javascript, we can use the window.location attribute inside the script element to aggressively load another page. It is a pointer to a Location object that represents the current location of the document. We can change the URL of a window by visiting it.
+            <h2>Syntax:</h2>
+             &lt;script&gt; <br>
+            window.location = &lt; Path / URL &gt; <br>
+            &lt;/script&gt; <br>
+
+            In the preceding example, we can see that altering the window.location object within Javascript allows us to aggressively load any page from Javascript without the use of a href tag. We'll make a simple working example to learn on the job.
+
+
+As the first step, create a file called index.html. Include two buttons and a heading. One button forces a live URL to load, while the other forces a local HTML page to load. The script> tag contains two functions: one that loads the gfg homepage and another that uses the window.location property to load a local HTML page.
+Create a newPage.html file. This is the local HTML page that would be loaded by Javascript.
+            <hr>
+
+            <h2>17. What are the disadvantages of using innerHTML in JavaScript?</h2>
+    <p> <strong>Answer:</strong> Step The innerHTML attribute of the Document Object Model (DOM) is used to set or return an element's HTML content. The return value represents the textual content of the HTML element. It allows JavaScript code to modify a currently displayed website. It specifically modifies or restores the internal HTML information of an element. The innerHTML property is widely used to change the contents of webpages because it is the simplest way to update DOM. However, using innerHTML in JavaScript has some disadvantages. <br> <br>
+        <Strong>The following are the disadvantages of using JavaScript's innerHTML property: </Strong><br>
+
+The use of innerHTML is more time-consuming since its contents are created gradually and previously parsed elements and contents must be re-parsed, which takes time. <br> <br>
+
+maintains the event handlers of any DOM element: Event handlers are not added to the new elements created by automatically setting innerHTML. This requires manually attaching event handlers to new elements and keeping track of the event handlers. This can cause a memory leak in some browsers. <br>
+<br>
+The following content has been altered: When you use innerHTML to add, append, delete, or change content on a webpage, it replaces and recreates all of the content and DOM nodes within that element. <br> <br>
+Appending innerHTML is not supported: Adding is frequently done in JavaScript with the += operator. When using innerHTML to append to an HTML tag, however, the entire tag is re-parsed. <br> <br>
+
+The old content is rewritten even though the item is still present.innerHTML object is used.Use innerHTML + 'html' instead of object.innerHTML += 'html'. Appending is not feasible until the entire innerHTML is repartitioned. As a result, working with innerHTML becomes incredibly slow. String concatenation simply cannot scale when dynamic DOM elements must be produced because it becomes difficult to maintain track of the plus signs' and quote marks' openings and closings. <br> <br>
+
+Can result in the document being broken: Because innerHTML does not provide proper validation, any valid HTML code can be utilised. As a result, the JavaScript document may be broken. <br>
+
+
+        <hr>
+
+        <h2>18. Create password field with show hide functionalitiesv</h2>
+        <p> <strong>Answer:</strong> This tutorial will show you how to use JavaScript to hide and disclose passwords. When filling out a form, we may need to type a password and want to go back and review our prior information. When you tick the box, the characters become visible for you to see. We'll utilise JavaScript to develop the toggle password feature in this session. <br><br>
+
+
+
+          <Strong>  Approach <br></Strong>
+            
+            Make an HTML form with a password-protected input area. <br>
+            Create a checkbox that will act as a toggle. <br>
+            Create a function that responds to the user clicking the checkbox.
+            <hr>
+</body>
+</html>

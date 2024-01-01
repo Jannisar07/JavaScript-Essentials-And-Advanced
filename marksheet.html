@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .marksheet{
+            border: 2px solid black;
+            width: fit-content;
+            padding: 50px;
+            margin: 5% auto;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .marksheet h2{
+            text-align: center;
+        }
+      .subjects{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .btn{
+        margin-top: 20px;
+      }
+      .btn button{
+        padding: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="marksheet"> 
+      <div>  <h2>Marksheet for Information Technology</h2></div>
+      <div>  <h2>Enter Marks</h2></div>
+
+      <div class="subjects">
+       <div> <label for="">1. C Language</label></div>
+       <div> <input type="text"  id="Sub1"></div>
+      </div> <!-- subjects ends here -->
+
+      <div class="subjects">
+        <div> <label for="">2. C++ Language</label></div>
+        <div> <input type="text" id="Sub2"></div>
+       </div> <!-- subjects ends here -->
+       <div class="subjects">
+        <div> <label for="">3. HTML</label></div>
+        <div> <input type="text" id="Sub3"></div>
+       </div> <!-- subjects ends here -->
+       <div class="subjects">
+        <div> <label for="">4. CSS</label></div>
+        <div> <input type="text" id="Sub4"></div>
+       </div> <!-- subjects ends here -->
+       <div class="subjects">
+        <div> <label for="">5. Database</label></div>
+        <div> <input type="text" id="Sub5"></div>
+       </div> <!-- subjects ends here -->
+       <div class="subjects">
+        <div> <label for="">6. Php</label></div>
+        <div> <input type="text" id="Sub6"></div>
+       </div> <!-- subjects ends here -->
+       <div class="subjects">
+        <div> <label for="">7. Core Java</label></div>
+        <div> <input type="text" id="Sub7"></div>
+       </div> <!-- subjects ends here -->
+
+
+
+      
+
+      <div class="btn" id="Btn" onclick="add()">
+      <button>Result</button>
+       <p id="para"> </p>
+       <p id="para1"></p>
+    </div>  <!-- btn ends here -->
+  
+
+    </div><!-- marksheet ends here -->
+
+    <script>
+        function add(){
+            var sub1 = Number( document.getElementById("Sub1").value);
+            var sub2 = Number( document.getElementById("Sub2").value);
+            var sub3 = Number( document.getElementById("Sub3").value);
+            var sub4 = Number( document.getElementById("Sub4").value);
+            var sub5 = Number( document.getElementById("Sub5").value);
+            var sub6 = Number( document.getElementById("Sub6").value);
+            var sub7 = Number( document.getElementById("Sub7").value);
+            var total = sub1 + sub2 + sub3 + sub4 + sub5 + sub6 + sub7 ;
+            var per = total/350 *100 ;
+            document.getElementById("para").innerHTML = " Total Marks is : " + total + " /350 ";
+            document.getElementById("para1").innerHTML = "pertange is :"  + per + "%";
+
+           
+        }
+    </script>
+</body>
+</html>
